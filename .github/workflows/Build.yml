@@ -1,0 +1,20 @@
+name: Generate
+
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  Generate:
+    runs-on: ubuntu-latest
+
+    steps: 
+      - uses: actions/checkout@v2    
+      - name: Twrp Device Tree Generate
+        run: |
+          python3
