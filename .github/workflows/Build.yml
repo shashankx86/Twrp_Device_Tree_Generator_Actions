@@ -17,4 +17,5 @@ jobs:
       - uses: actions/checkout@v2    
       - name: Twrp Device Tree Generate
         run: |
+          python3 -v
           pip3 install twrpdtgen
