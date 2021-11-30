@@ -1,2 +1,3 @@
-# Twrp_Device_Tree_Generator_Actions
-Generate Twrp Tree using Github Workflow/Actions
+# TWRP Device Tree Generator
+### Generate Twrp Tree using Github Workflow/Actions
+
