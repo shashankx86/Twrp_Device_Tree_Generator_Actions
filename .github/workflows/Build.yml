@@ -31,12 +31,17 @@ jobs:
          7z e AP_*.tar.md5
          ls
          lz4 boot.img.lz4 boot.img
+         lz4 recovery.img.lz4 recovery.img
          ls 
          
       - uses: actions/upload-artifact@v2
         with:
           name: Boot Image
           path: boot.img
-         
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Recovery Image
+          path: recovery.img
+          
 
          
