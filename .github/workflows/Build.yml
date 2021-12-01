@@ -17,5 +17,6 @@ jobs:
       - uses: actions/checkout@v2    
       - name: Twrp Device Tree Generate
         run: |
-          python3 -v
-          pip3 install twrpdtgen
+         sudo apt-get install wget
+         wget https://dl.sam-fw.cf/v2/IxJCDiMnLiMeMRQcHi88ADsvLAISNh4lFzssIDs2ByAzMUEgOzEUQDMQMCMBOyw/I0AsFCERHwwvAxUGLyUHCA8nHh0jMQIBDTAzMRInPhQeOEEXNDsCADQ2BgUvCywnEgAwBiMwFTADNi8jAzsGCyEAHwsjJB4vMgc+IDw7HgE0EQYSMjhBDiFABkIjCyI/Iws8MQEWCDAeCw0xCREHOTQbIyshAD4OIQAGLC44Hiw0ER4OMiUzLDIlDSs8AD4fJhsGOg8HCkA8AywnCRc+Di8LBxAzBy4RDxYpKTwkHjUeBylCJgceKTIXIUAJER4OMi8+AwMSMCAjCyJAMyw+QQMsHiYNAwU5HjEhPBcHOz8NMC9BIyw+ETwXIysPESw5JhsGQDIlMy0SJzMhMgMvBy87Ljo7JA0/OywsFDIEMAABCB4/OwsHIR4sAgojCwdCJhYIACMkFSQjJCMAAQMjEw==
+         ls
