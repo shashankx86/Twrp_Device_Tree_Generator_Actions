@@ -14,20 +14,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps: 
-      - uses: actions/checkout@v2    
-      - name: Required package Install
-        run: sudo apt-get install wget zip unzip p7zip p7zip-full p7zip-rar
-      - name: Stock ROM Files Downalod
-        run: wget https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-large-zip-file.zip -O sam.zip
-      - name: TWRP Device Tree Generate
-        run: |
-         unzip sam.zip
-         ls
       - name: Setup Python
         uses: actions/setup-python@v2.3.1
         with:
           python-version: '3.9'
           architecture: 'x64'
       - run: python -m pip install twrpdtgen
+      - uses: actions/checkout@v2    
+      - name: Required package Install
+        run: sudo apt-get install wget zip unzip p7zip p7zip-full p7zip-rar cpio liblz4-tool
+      - name: Stock ROM Files Downalod
+        run: wget https://dl.sam-fw.cf/v2/IxJCDiMnLh8SLAo5IRtBAzwDMyMyCB4lFzssIDs2ByAzMUEgOzEUQDMQMCMBOyw/LiUzJjIXCDkuJC8/NDseIy8xIQYzOAIlPDAVHRIvMz81CAIkMwsuOB42FA00Nh4LNS8vFjIXLA0NFzE/PAMeOTMADTkDAC4mNBEaMCExQQEhJQUUHjFCMTs4BkIjCyI/Iws8MQEWCDAeCw0xCREHOTQbIyshAD4OIQAGLC44Hiw0ER4OMiUzLDIlDSs8AD4fJhsGOg8HCkA8AywnCRc+Di8LBxAzBy4RDxYpKTwkHjUeBylCJgceKTIXIUAJER4OMi8+AwMSMCAjCyJAMyw+QQMsHiYNAwU5HjEhPBcHOz8NMC9BIyw+ETwXIysPESw5Jhs5HwE4BwwDMCIfDyUuAjU4Ajo1ESEvITYCOTUnGjk1JyEKCTsNPzQwLB0SFgdCJhYIACMkFSQjJA0UIwM2Ew== -O sam.zip
+      - name: TWRP Device Tree Generate
+        run: |
+         unzip sam.zip
+         7z e AP_*.tar.md5
+         ls
+         lz4 boot.img.lz4 boot.img
+         ls 
+         
 
          
