@@ -24,8 +24,9 @@ jobs:
         run: |
          unzip sam.zip
          ls
-      - name: Setup Python
+      
       - uses: actions/setup-python@v2.3.1
+      - name: Setup Python
         with:
           python-version: '3.9'
           architecture: 'x64'
