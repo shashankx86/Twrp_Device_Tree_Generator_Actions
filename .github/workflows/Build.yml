@@ -32,8 +32,13 @@ jobs:
          ls
          lz4 boot.img.lz4 boot.img
          lz4 recovery.img.lz4 recovery.img
-         ls 
+         ls
+         python -m twrpdtgen recovery.img
          
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Twrp Device Tree
+          path: output/*
       - uses: actions/upload-artifact@v2
         with:
           name: Boot Image
