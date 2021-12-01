@@ -18,8 +18,8 @@ jobs:
       - name: Required package Install
         run: sudo apt-get install wget zip unzip p7zip p7zip-full p7zip-rar
       - name: Stock ROM Files Downalod
-         wget https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-large-zip-file.zip -O sam.zip
-         #wget https://dl.sam-fw.cf/v2/IxJCDiMnLh8SLAo5IRtBAzwDMyMyCB4lFzssIDs2ByAzMUEgOzEUQDMQMCMBOyw/LiUzJjIXCDkuJC8/NDseIy8xIQYzOAIlPDAVHRIvMz81CAIkMwsuOB42FA00Nh4LNS8vFjIXLA0NFzE/PAMeOTMADTkDAC4mNBEaMCExQQEhJQUUHjFCMTs4BkIjCyI/Iws8MQEWCDAeCw0xCREHOTQbIyshAD4OIQAGLC44Hiw0ER4OMiUzLDIlDSs8AD4fJhsGOg8HCkA8AywnCRc+Di8LBxAzBy4RDxYpKTwkHjUeBylCJgceKTIXIUAJER4OMi8+AwMSMCAjCyJAMyw+QQMsHiYNAwU5HjEhPBcHOz8NMC9BIyw+ETwXIysPESw5Jhs5HwE4BwwDMCIfDyUuAjU4Ajo1ESEvITYCOTUnGjk1JyEKCTsNPzQwLB0SFgdCJhYIACMkFSQjJA0UIwM2Ew== -O sam.zip
+      - run: wget https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-large-zip-file.zip -O sam.zip
+      #wget https://dl.sam-fw.cf/v2/IxJCDiMnLh8SLAo5IRtBAzwDMyMyCB4lFzssIDs2ByAzMUEgOzEUQDMQMCMBOyw/LiUzJjIXCDkuJC8/NDseIy8xIQYzOAIlPDAVHRIvMz81CAIkMwsuOB42FA00Nh4LNS8vFjIXLA0NFzE/PAMeOTMADTkDAC4mNBEaMCExQQEhJQUUHjFCMTs4BkIjCyI/Iws8MQEWCDAeCw0xCREHOTQbIyshAD4OIQAGLC44Hiw0ER4OMiUzLDIlDSs8AD4fJhsGOg8HCkA8AywnCRc+Di8LBxAzBy4RDxYpKTwkHjUeBylCJgceKTIXIUAJER4OMi8+AwMSMCAjCyJAMyw+QQMsHiYNAwU5HjEhPBcHOz8NMC9BIyw+ETwXIysPESw5Jhs5HwE4BwwDMCIfDyUuAjU4Ajo1ESEvITYCOTUnGjk1JyEKCTsNPzQwLB0SFgdCJhYIACMkFSQjJA0UIwM2Ew== -O sam.zip
       - name: TWRP Device Tree Generate
         run: |
          unzip sam.zip
