@@ -33,5 +33,10 @@ jobs:
          lz4 boot.img.lz4 boot.img
          ls 
          
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Boot Image
+          path: boot.img
+         
 
          
