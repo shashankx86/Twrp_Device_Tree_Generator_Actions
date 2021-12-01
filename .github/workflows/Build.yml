@@ -23,6 +23,6 @@ jobs:
         run: |
          unzip sam.zip
          ls
-         7z e *.tar.md5
+         7z e AP_*.tar.md5
          ls
          
