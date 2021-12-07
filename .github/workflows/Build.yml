@@ -8,6 +8,11 @@ on:
     branches: [ main ]
 
   workflow_dispatch:
+    inputs:
+      url:
+        description: 'Stock ROM Url'     
+        required: true
+        default: 'None'
 
 jobs:
   Generate:
