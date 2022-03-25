@@ -27,16 +27,11 @@ jobs:
       - run: python -m pip install twrpdtgen
       - uses: actions/checkout@v2    
       - name: Required package Install
-        run: sudo apt-get install wget zip unzip p7zip p7zip-full p7zip-rar cpio liblz4-tool
+        run: sudo apt-get install wget cpio
       - name: Stock ROM Files Downalod
-        run: wget https://cdn.sammirrors.cf/v2/IxJCDiMnLh0SLD4AAxEHOTMnHyA1Ox4lFzssIDs2ByAzMUEgOzEUQDMQMCMBOyw/MycNHw84LiA8ES82Hjs+AA0RPiUDFy4LNQBBBSMnKTM0QB4LHiUgMSFABxcNOyEbMyQpDSMHKSE7CCM5OyQuMQNAAiA8F0EcAzsfBRIEMCcyJB4HPC8CETRABkIjCyI/Iws8MQEWCDAeCw0xCREHOTQbIyshAD4OIQAGLC44Hiw0ER4OMiUzLDIlDSs8AD4fJhsGOg8HCkA8AywnCRc+Di8LBxAzBy4RDxYpKTwkHjUeBylCJgceKTIXIUAJER4OMi8+AwMSMCAjCyJAMyw+QQMsHiYNAwU5HjEhPBcHOz8NMC9BIyw+ETwXIysPESw5JhsGAzQAByAeLx4AIQAUQBISMSQuBzskMiQeQTMwLywhCB4RHjsdOQ8RQRwuJAdCJhYIACMkFSQeFiJAARYiEw== -O sam.zip
+        run: wget https://temp.sh/bKUpb/boot.img
       - name: TWRP Device Tree Generate
         run: |
-         unzip sam.zip
-         7z e AP_*.tar.md5
-         ls
-         lz4 boot.img.lz4 boot.img
-         lz4 recovery.img.lz4 recovery.img
          ls
          python -m twrpdtgen recovery.img
          
@@ -44,14 +39,14 @@ jobs:
         with:
           name: Twrp Device Tree
           path: output/*
-      - uses: actions/upload-artifact@v2
-        with:
-          name: Boot Image
-          path: boot.img
-      - uses: actions/upload-artifact@v2
-        with:
-          name: Recovery Image
-          path: recovery.img
+#       - uses: actions/upload-artifact@v2
+#         with:
+#           name: Boot Image
+#           path: boot.img
+#       - uses: actions/upload-artifact@v2
+#         with:
+#           name: Recovery Image
+#           path: recovery.img
           
 
          
