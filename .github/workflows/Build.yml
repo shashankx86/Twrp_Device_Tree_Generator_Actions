@@ -29,11 +29,11 @@ jobs:
       - name: Required package Install
         run: sudo apt-get install wget cpio
       - name: Stock ROM Files Downalod
-        run: wget https://a.tmp.ninja/jhSZwYOU.img
+        run: wget https://a.tmp.ninja/jhSZwYOU.img -O boot.img
       - name: TWRP Device Tree Generate
         run: |
          ls
-         python -m twrpdtgen recovery.img
+         python -m twrpdtgen boot.img
          
       - uses: actions/upload-artifact@v2
         with:
